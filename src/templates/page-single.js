@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 // import Image from "gatsby-image"
 import parse from "html-react-parser"
 
-import "../css/@wordpress/block-library/build-style/style.css"
-import "../css/@wordpress/block-library/build-style/theme.css"
+// import "../css/@wordpress/block-library/build-style/style.css"
+// import "../css/@wordpress/block-library/build-style/theme.css"
 
 // import Bio from "../components/bio"
 import Layout from "../components/layout"
