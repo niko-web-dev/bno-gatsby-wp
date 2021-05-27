@@ -1,18 +1,18 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 // import Image from "gatsby-image"
 import parse from "html-react-parser"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const SingleProduct = ({ data: { product } }) => {
+
+const SingleProduct= ({ data: { product } }) => {
   // const featuredImage = {
   //   fluid: product.featuredImage?.node?.localFile?.childImageSharp?.fluid,
   //   alt: product.featuredImage?.node?.alt || ``,
   // }
   
-  console.log(product)
 
   return (
     <Layout>

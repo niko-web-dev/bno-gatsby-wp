@@ -1,10 +1,10 @@
 const { slash } = require( `gatsby-core-utils` )
 const chunk = require(`lodash/chunk`)
 const getProducts = require(`./queries/get-products`)
-const getWpSettingsProductsPerPage = require(`./queries/get-wp-settings-products-per-page`)
+// const getWpSettingsProductsPerPage = require(`./queries/get-wp-settings-products-per-page`)
 
-const singleProductTemplate = require.resolve(`../../src/templates/product-single.js`)
-const productArchiveTemplate = require.resolve(`../../src/templates/product-archive.js`)
+const singleProductTemplate = require.resolve(`../../src/templates/product-single.tsx`)
+const productArchiveTemplate = require.resolve(`../../src/templates/product-archive.tsx`)
 
 module.exports = async gatsbyUtilities => {
     const products = await getProducts(gatsbyUtilities)

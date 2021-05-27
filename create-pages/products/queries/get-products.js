@@ -2,17 +2,11 @@ const WpProducts = `
 query WpProducts {
   allProducts: allWpPost(sort: { fields: [date], order: DESC }) {
     edges {
-      previous {
-        id
-      }
       product: node {
         id
         slug
         uri
         title
-      }
-      next {
-        id
       }
     }
   }

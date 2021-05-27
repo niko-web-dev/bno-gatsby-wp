@@ -1,37 +1,23 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React, {FC} from "react"
+import { Link} from "gatsby"
 import parse from "html-react-parser"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import {TProductsWP } from '../types/index'
 
-const ProductArchive = ({
-  pageContext: { products },
-}) => {
+export type TPageContext = {
+    pageContext: TProductsWP
+}
 
-  // const products = data.products.nodes
-
-  if (!products.length) {
-    return (
-      <Layout isHomePage>
-        <Seo title="All products" />
-        <Bio />
-        <p>
-          No blog posts found. Add posts to your WordPress site and they'll
-          appear here!
-        </p>
-      </Layout>
-    )
-  }
+const ProductArchive: FC<TPageContext> = ( { pageContext: { products } }) => {
 
   return (
     <Layout isHomePage>
       <Seo title="All products" />
 
       <ol style={{ listStyle: `none` }}>
-        {products.map(({ product }) => {
-          // const title = product.title
+        {products.map(( product) => {
           return (
             <li key={product.id}>
               <article
@@ -45,9 +31,7 @@ const ProductArchive = ({
                       <span itemProp="headline">{parse(product.title)}</span>
                     </Link>
                   </h2>
-                  {/*<small>{product.date}</small>*/}
                 </header>
-                {/*<section itemProp="description">{parse(product.excerpt)}</section>*/}
               </article>
             </li>
           )

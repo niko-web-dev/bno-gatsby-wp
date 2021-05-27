@@ -19,6 +19,17 @@ export type IPropsIcons = {
   children: ReactNode;
 }
 
+export type TProductsWP = {
+  products: Array<TProductWP>
+};
+
+export type TProductWP = {
+  id: number;
+  slug: string;
+  title: string;
+  uri: string;
+};
+
 export type TProduct = {
   id: number;
   article: string;
